@@ -1,7 +1,7 @@
 # algorithm-question
 Answer to a common algorithm question in PHP
 
-## Question 1 : (empire.php & empire.txt)
+## Question 1 :
 
    You are presented with a map of a kingdom. Empty land on this map is depicted as ‘.’ (without the quotes), and mountains are depicted by ‘#’. This kingdom has factions whose armies are represented by lowercase letters in the map. Two armies of the same letter belong to the same faction.
 
