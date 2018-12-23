@@ -11,7 +11,6 @@ class Empire
   public $contested = 0;
   public $visited = [];
   public $regionvisited = [];
-  public $regioncurrent = [];
   public $x = 0;
   public $y = 0;
   public $current_location = [];
@@ -27,11 +26,6 @@ class Empire
 
     $this->searchRegions();
     $this->searchFactions();
-    $this->prepareEachRegion();
-  }
-
-  public function prepareEachRegion() {
-
   }
 
   public function searchFactions() {
@@ -324,23 +318,17 @@ class Region extends Empire
         if($alpha == "" || $r[0] == $alpha) {
           $alpha = $r[0];
         } else {
-          $contested = true;
+          return [
+            "type" => "contested"
+          ];
         }
       }
     }
-
-    if($contested) {
-      return [
-        "type" => "contested"
-      ];
-    } else {
-      return [
-        "type" => "faction",
-        "name" => $alpha
-      ];
-    }
+    return [
+      "type" => "faction",
+      "name" => $alpha
+    ];
   }
-
 }
 function initArray($prefix, $suffix, $input, $no = 0) {
   $arr = [];
