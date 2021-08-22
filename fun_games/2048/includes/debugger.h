@@ -6,7 +6,7 @@
 #include "util.h"
 
 class Debugger {
-   public:
+  public:
 	Debugger();
 	virtual ~Debugger();
 

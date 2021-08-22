@@ -4,7 +4,7 @@
 #include <cstring>
 
 class Player {
-	public:
+  public:
 	Player();
 	virtual ~Player();
 	unsigned long int getPlayerScore();
@@ -13,8 +13,8 @@ class Player {
 	char *getPlayerName();
 	void setPlayerName(const char *);
 
-	protected:
-	private:
+  protected:
+  private:
 	char playerName[30];
 	unsigned long int playerScore;
 };

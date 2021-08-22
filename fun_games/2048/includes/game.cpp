@@ -23,7 +23,7 @@ Game::Game() {
 }
 
 Game::~Game() {
-	//constructor
+	//destructor
 }
 
 Game::GameState Game::gameState;
@@ -38,6 +38,7 @@ void Game::initGame() {
 	rlutil::setBackgroundColor(rlutil::COLORS::WHITE);
 	rlutil::hidecursor();
 }
+
 void Game::startGame() {
 	initGame();
 	while (gameState != GameState::QUIT) {
@@ -131,14 +132,14 @@ void Game::gameLoop() {
 		player->setPlayerName(name);
 
 		std::cout << "\n\n\t\t PLAYER DETAILS \n";
-		std::cout << "\n\t\t Name : " << player->getPlayerName();
-		std::cout << "\n\t\t Score : " << player->getPlayerScore();
+		std::cout << "\n\n\t\t Name : " << player->getPlayerName();
+		std::cout << "\n\n\t\t Score : " << player->getPlayerScore();
 
 		Utilities::print("\n\n\t\t Uploading Player Details", false);
 		Utilities::print("...", true, Utilities::defaultTextColor, Utilities::defaultDelay * 10);
 		uploadWinnerData();
-		Utilities::print("\n\t\t Done.", true, rlutil::COLORS::BLUE, 0);
-		Utilities::print("\n\t\t Press any to return to main menu.", true, rlutil::COLORS::BLUE, 0);
+		Utilities::print("\n\n\t\t Done.", true, rlutil::COLORS::BLUE, 0);
+		Utilities::print("\n\n\t\t Press any to return to main menu.", true, rlutil::COLORS::BLUE, 0);
 	}
 
 	delete player;

@@ -13,13 +13,13 @@
 #include "util.h"
 
 class Game {
-	public:
+  public:
 	Game();
 	virtual ~Game();
 
 	static void startGame();
 
-	private:
+  private:
 	enum class GameState {
 		PLAYING,
 		QUIT

@@ -1,0 +1,1 @@
+g++ -o main.exe main.cpp includes/player.cpp includes/game.cpp includes/debugger.cpp includes/util.cpp
